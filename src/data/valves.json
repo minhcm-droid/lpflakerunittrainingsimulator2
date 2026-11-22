@@ -1,0 +1,399 @@
+[
+  {
+    "valveId": "VLV-SU-V1",
+    "tag": "V1 (Start-Up)",
+    "sopTag": "V1",
+    "sopContext": "STARTUP",
+    "name": {
+      "vi": "Van chặn đầu hút bơm P-717A",
+      "en": "P-717A Suction Isolation Valve"
+    },
+    "valveType": "manual-isolation",
+    "pidDrawing": "SC0353-ESD0-PD-2000-712",
+    "lineService": "LP",
+    "operableFromField": true,
+    "operableFromDCS": false,
+    "state": "CLOSED",
+    "openingPercent": 0,
+    "sourceReference": {
+      "document": "HD-W-7800-02-001",
+      "drawingNumber": "SC0353-ESD0-PD-2000-712"
+    },
+    "verificationStatus": "VERIFIED"
+  },
+  {
+    "valveId": "VLV-SU-V2",
+    "tag": "V2 (Start-Up)",
+    "sopTag": "V2",
+    "sopContext": "STARTUP",
+    "name": {
+      "vi": "Van hơi MS gia nhiệt jacket P-717A",
+      "en": "P-717A Heating Steam MS Valve"
+    },
+    "valveType": "manual-isolation",
+    "pidDrawing": "SC0353-ESD0-PD-2000-712",
+    "lineService": "MS",
+    "operableFromField": true,
+    "operableFromDCS": false,
+    "state": "CLOSED",
+    "openingPercent": 0,
+    "sourceReference": {
+      "document": "HD-W-7800-02-001",
+      "drawingNumber": "SC0353-ESD0-PD-2000-712"
+    },
+    "verificationStatus": "VERIFIED"
+  },
+  {
+    "valveId": "VLV-SU-V4",
+    "tag": "V4 (Start-Up)",
+    "sopTag": "V4",
+    "sopContext": "STARTUP",
+    "name": {
+      "vi": "Van chặn đầu đẩy bơm P-717A",
+      "en": "P-717A Discharge Isolation Valve"
+    },
+    "valveType": "manual-isolation",
+    "pidDrawing": "SC0353-ESD0-PD-2000-712",
+    "lineService": "LP",
+    "operableFromField": true,
+    "operableFromDCS": false,
+    "state": "CLOSED",
+    "openingPercent": 0,
+    "sourceReference": {
+      "document": "HD-W-7800-02-001",
+      "drawingNumber": "SC0353-ESD0-PD-2000-712"
+    },
+    "verificationStatus": "VERIFIED"
+  },
+  {
+    "valveId": "VLV-SU-V5",
+    "tag": "V5 (Start-Up)",
+    "sopTag": "V5",
+    "sopContext": "STARTUP",
+    "name": {
+      "vi": "Van chặn tuyến cấp LP sang Flaker",
+      "en": "LP Feed Header Isolation Valve"
+    },
+    "valveType": "manual-isolation",
+    "pidDrawing": "SC0353-ESD0-PD-2000-712",
+    "lineService": "LP",
+    "operableFromField": true,
+    "operableFromDCS": false,
+    "state": "CLOSED",
+    "openingPercent": 0,
+    "sourceReference": {
+      "document": "HD-W-7800-02-001",
+      "drawingNumber": "SC0353-ESD0-PD-2000-712"
+    },
+    "verificationStatus": "VERIFIED"
+  },
+  {
+    "valveId": "VLV-SU-V6",
+    "tag": "V6 (Start-Up)",
+    "sopTag": "V6",
+    "sopContext": "STARTUP",
+    "name": {
+      "vi": "Van tuần hoàn bypass LP về D-717",
+      "en": "LP Circulation Bypass Valve to D-717"
+    },
+    "valveType": "bypass-valve",
+    "pidDrawing": "SC0353-ESD0-PD-2000-712",
+    "lineService": "LP",
+    "operableFromField": true,
+    "operableFromDCS": false,
+    "state": "OPEN",
+    "openingPercent": 100,
+    "sourceReference": {
+      "document": "HD-W-7800-02-001",
+      "drawingNumber": "SC0353-ESD0-PD-2000-712"
+    },
+    "verificationStatus": "VERIFIED"
+  },
+  {
+    "valveId": "VLV-SU-V13",
+    "tag": "V13 (Start-Up)",
+    "sopTag": "V13",
+    "sopContext": "STARTUP",
+    "name": {
+      "vi": "Van xả nước ngưng tuyến hơi P-717A",
+      "en": "P-717A Steam Condensate Drain Valve"
+    },
+    "valveType": "drain-valve",
+    "pidDrawing": "SC0353-ESD0-PD-2000-712",
+    "lineService": "SC",
+    "operableFromField": true,
+    "operableFromDCS": false,
+    "state": "CLOSED",
+    "openingPercent": 0,
+    "sourceReference": {
+      "document": "HD-W-7800-02-001",
+      "drawingNumber": "SC0353-ESD0-PD-2000-712"
+    },
+    "verificationStatus": "VERIFIED"
+  },
+  {
+    "valveId": "VLV-SU-V14",
+    "tag": "V14 (Start-Up)",
+    "sopTag": "V14",
+    "sopContext": "STARTUP",
+    "name": {
+      "vi": "Van cấp khí Nitơ (LN) chính vào M-761A",
+      "en": "Main Nitrogen (LN) Supply Valve to M-761A"
+    },
+    "valveType": "manual-isolation",
+    "pidDrawing": "SC0353-ESD0-PD-2000-717",
+    "lineService": "LN",
+    "operableFromField": true,
+    "operableFromDCS": false,
+    "state": "CLOSED",
+    "openingPercent": 0,
+    "sourceReference": {
+      "document": "HD-W-7800-02-001",
+      "drawingNumber": "SC0353-ESD0-PD-2000-717"
+    },
+    "verificationStatus": "VERIFIED"
+  },
+  {
+    "valveId": "VLV-SU-V15B",
+    "tag": "V15b (Start-Up)",
+    "sopTag": "V15b",
+    "sopContext": "STARTUP",
+    "name": {
+      "vi": "Van hơi MS gia nhiệt chảo Melting Pan M-761A",
+      "en": "M-761A Melting Pan MS Heating Valve"
+    },
+    "valveType": "manual-isolation",
+    "pidDrawing": "SC0353-ESD0-PD-2000-717",
+    "lineService": "MS",
+    "operableFromField": true,
+    "operableFromDCS": false,
+    "state": "CLOSED",
+    "openingPercent": 0,
+    "sourceReference": {
+      "document": "HD-W-7800-02-001",
+      "drawingNumber": "SC0353-ESD0-PD-2000-717"
+    },
+    "verificationStatus": "VERIFIED"
+  },
+  {
+    "valveId": "VLV-SU-V16A",
+    "tag": "V16a (Start-Up)",
+    "sopTag": "V16a",
+    "sopContext": "STARTUP",
+    "name": {
+      "vi": "Van nước làm mát CW vào trống M-761A",
+      "en": "M-761A Cooling Water Supply Valve"
+    },
+    "valveType": "manual-isolation",
+    "pidDrawing": "SC0353-ESD0-PD-2000-717",
+    "lineService": "CW",
+    "operableFromField": true,
+    "operableFromDCS": false,
+    "state": "CLOSED",
+    "openingPercent": 0,
+    "sourceReference": {
+      "document": "HD-W-7800-02-001",
+      "drawingNumber": "SC0353-ESD0-PD-2000-717"
+    },
+    "verificationStatus": "VERIFIED"
+  },
+  {
+    "valveId": "VLV-SU-V17",
+    "tag": "V17 (Start-Up)",
+    "sopTag": "V17",
+    "sopContext": "STARTUP",
+    "name": {
+      "vi": "Van nạp LP lỏng vào chảo M-761A",
+      "en": "Molten LP Feed Valve to M-761A"
+    },
+    "valveType": "manual-isolation",
+    "pidDrawing": "SC0353-ESD0-PD-2000-717",
+    "lineService": "LP",
+    "operableFromField": true,
+    "operableFromDCS": false,
+    "state": "CLOSED",
+    "openingPercent": 0,
+    "sourceReference": {
+      "document": "HD-W-7800-02-001",
+      "drawingNumber": "SC0353-ESD0-PD-2000-717"
+    },
+    "verificationStatus": "VERIFIED"
+  },
+  {
+    "valveId": "VLV-SU-V18",
+    "tag": "V18 (Start-Up)",
+    "sopTag": "V18",
+    "sopContext": "STARTUP",
+    "name": {
+      "vi": "Van xả đáy chảo Melting Pan M-761A",
+      "en": "M-761A Melting Pan Bottom Drain Valve"
+    },
+    "valveType": "drain-valve",
+    "pidDrawing": "SC0353-ESD0-PD-2000-717",
+    "lineService": "LP",
+    "operableFromField": true,
+    "operableFromDCS": false,
+    "state": "CLOSED",
+    "openingPercent": 0,
+    "sourceReference": {
+      "document": "HD-W-7800-02-001",
+      "drawingNumber": "SC0353-ESD0-PD-2000-717"
+    },
+    "verificationStatus": "VERIFIED"
+  },
+  {
+    "valveId": "VLV-SD-V3",
+    "tag": "V3 (Shutdown)",
+    "sopTag": "V3",
+    "sopContext": "SHUTDOWN",
+    "name": {
+      "vi": "Van xả đáy chảo Melting Pan M-761A (Quy trình Dừng)",
+      "en": "M-761A Pan Drain Valve (Shutdown Tag)"
+    },
+    "valveType": "drain-valve",
+    "pidDrawing": "SC0353-ESD0-PD-2000-717",
+    "lineService": "LP",
+    "operableFromField": true,
+    "operableFromDCS": false,
+    "state": "CLOSED",
+    "openingPercent": 0,
+    "sourceReference": {
+      "document": "HD-W-7800-06-001",
+      "drawingNumber": "SC0353-ESD0-PD-2000-717"
+    },
+    "verificationStatus": "VERIFIED"
+  },
+  {
+    "valveId": "VLV-SD-V7",
+    "tag": "V7 (Shutdown)",
+    "sopTag": "V7",
+    "sopContext": "SHUTDOWN",
+    "name": {
+      "vi": "Van cô lập tuyến đẩy LP P-717A (Quy trình Dừng)",
+      "en": "P-717A Discharge Isolation Valve (Shutdown Tag)"
+    },
+    "valveType": "manual-isolation",
+    "pidDrawing": "SC0353-ESD0-PD-2000-712",
+    "lineService": "LP",
+    "operableFromField": true,
+    "operableFromDCS": false,
+    "state": "OPEN",
+    "openingPercent": 100,
+    "sourceReference": {
+      "document": "HD-W-7800-06-001",
+      "drawingNumber": "SC0353-ESD0-PD-2000-712"
+    },
+    "verificationStatus": "VERIFIED"
+  },
+  {
+    "valveId": "VLV-20-HEV-761A",
+    "tag": "20-HEV-761A",
+    "sopContext": "COMMON",
+    "name": {
+      "vi": "Van trượt cụm đóng gói Z-764A (Slide Gate Valve)",
+      "en": "Packing Slide Gate Valve 20-HEV-761A"
+    },
+    "valveType": "slide-gate-valve",
+    "pidDrawing": "SC0353-ESD0-PD-2000-717",
+    "lineService": "LP_FLAKE",
+    "failPosition": "FC",
+    "operableFromField": false,
+    "operableFromDCS": true,
+    "state": "CLOSED",
+    "openingPercent": 0,
+    "sourceReference": {
+      "document": "HD-W-7800-02-001 & 06-001",
+      "drawingNumber": "SC0353-ESD0-PD-2000-717"
+    },
+    "verificationStatus": "VERIFIED",
+    "conflictNote": "De-energize CLOSE khi dừng (SOP Shutdown ghi nhầm ON)."
+  },
+  {
+    "valveId": "VLV-20-HEV-763A",
+    "tag": "20-HEV-763A",
+    "sopContext": "COMMON",
+    "name": {
+      "vi": "Cơ cấu ép dao gạt trống M-761A (Scraper Actuator)",
+      "en": "Drum Scraper Actuator 20-HEV-763A"
+    },
+    "valveType": "scraper-actuator",
+    "pidDrawing": "SC0353-ESD0-PD-2000-717",
+    "lineService": "MECHANICAL",
+    "failPosition": "FO",
+    "operableFromField": false,
+    "operableFromDCS": true,
+    "state": "OPEN",
+    "openingPercent": 100,
+    "sourceReference": {
+      "document": "HD-W-7800-02-001 & 06-001",
+      "drawingNumber": "SC0353-ESD0-PD-2000-717"
+    },
+    "verificationStatus": "VERIFIED"
+  },
+  {
+    "valveId": "VLV-PV-705",
+    "tag": "PV-705",
+    "sopContext": "COMMON",
+    "name": {
+      "vi": "Van điều khiển áp suất đầu hút quạt C-770",
+      "en": "Vent Blower C-770 Suction Control Valve"
+    },
+    "valveType": "control-valve",
+    "pidDrawing": "SC0353-ESD0-PD-2000-718",
+    "lineService": "VENT",
+    "failPosition": "FO",
+    "operableFromField": false,
+    "operableFromDCS": true,
+    "state": "THROTTLED",
+    "openingPercent": 45,
+    "sourceReference": {
+      "document": "HD-W-7800-02-001 & 06-001",
+      "drawingNumber": "SC0353-ESD0-PD-2000-718"
+    },
+    "verificationStatus": "VERIFIED"
+  },
+  {
+    "valveId": "VLV-SDV-711",
+    "tag": "SDV-711",
+    "sopContext": "COMMON",
+    "name": {
+      "vi": "Van dừng khẩn cấp tuyến khí thu hồi sang D-882",
+      "en": "Vent Recovery Shutdown Valve to D-882"
+    },
+    "valveType": "shutdown-valve",
+    "pidDrawing": "SC0353-ESD0-PD-2000-718",
+    "lineService": "VENT",
+    "failPosition": "FC",
+    "operableFromField": false,
+    "operableFromDCS": true,
+    "state": "OPEN",
+    "openingPercent": 100,
+    "sourceReference": {
+      "document": "P&ID SC0353-ESD0-PD-2000-718",
+      "drawingNumber": "SC0353-ESD0-PD-2000-718"
+    },
+    "verificationStatus": "VERIFIED"
+  },
+  {
+    "valveId": "VLV-SDV-712",
+    "tag": "SDV-712",
+    "sopContext": "COMMON",
+    "name": {
+      "vi": "Van dừng khẩn cấp xả an toàn ra khí quyển qua FA-7003",
+      "en": "Vent Atmospheric Relief Shutdown Valve"
+    },
+    "valveType": "shutdown-valve",
+    "pidDrawing": "SC0353-ESD0-PD-2000-718",
+    "lineService": "VENT",
+    "failPosition": "FO",
+    "operableFromField": false,
+    "operableFromDCS": true,
+    "state": "CLOSED",
+    "openingPercent": 0,
+    "sourceReference": {
+      "document": "P&ID SC0353-ESD0-PD-2000-718",
+      "drawingNumber": "SC0353-ESD0-PD-2000-718"
+    },
+    "verificationStatus": "VERIFIED"
+  }
+]

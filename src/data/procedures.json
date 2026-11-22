@@ -1,0 +1,534 @@
+[
+  {
+    "stepId": "STARTUP-001",
+    "procedureType": "STARTUP",
+    "phase": "pre-startup",
+    "sequence": 1,
+    "title": {
+      "vi": "Kiểm tra điều kiện sẵn sàng cơ khí, tiện ích & hệ thống làm kín",
+      "en": "Check Mechanical Completion, Utilities & Seal Plan 02/53A Readiness"
+    },
+    "instruction": {
+      "vi": "FO kiểm tra hoàn tất bảo trì/cô lập, sẵn sàng nguồn điện, khí IA, hơi MS/HS, nước CW, Brine BRS/BRR, Nitơ LN và mức dầu làm kín P-717A/B (LG-7108A/B, PCV-717A/B = 12.6 kg/cm2g). Đóng các van xả PIT-705 (V7) và xe bồn (V8).",
+      "en": "FO verifies maintenance clearance, utilities (IA, MS/HS, CW, Brine, LN), and P-717A/B Seal Plan 02/53A (LG-7108A/B, PCV-717A/B = 12.6 kg/cm2g)."
+    },
+    "operatorRole": "FIELD",
+    "equipmentTags": [
+      "D-717",
+      "P-717A",
+      "P-717B",
+      "M-761A",
+      "M-761B"
+    ],
+    "valveTags": [
+      "V7 (Start-Up)",
+      "V8 (Start-Up)"
+    ],
+    "instrumentTags": [
+      "LI-781"
+    ],
+    "initialConditions": [
+      "Hệ thống đã hoàn tất kiểm tra sau bảo trì"
+    ],
+    "permissives": [],
+    "expectedResponse": [
+      "Áp suất bình dầu seal P-717A/B ổn định ở 12.6 kg/cm2g"
+    ],
+    "verificationMethod": [
+      "Kiểm tra trực quan tại hiện trường và đối chiếu checklist"
+    ],
+    "alarmsToWatch": [],
+    "interlocks": [],
+    "hazards": [
+      "Xác nhận van chặn trước/sau PSV-718A/B ở trạng thái khóa mở (LO)"
+    ],
+    "communicationRequired": "FO báo cáo BM hoàn tất kiểm tra Preparation tại hiện trường",
+    "sourceReference": {
+      "document": "HD-W-7800-02-001",
+      "section": "Step 1",
+      "drawingNumber": "SC0353-ESD0-PD-2000-009 & 712"
+    },
+    "verificationStatus": "VERIFIED"
+  },
+  {
+    "stepId": "STARTUP-002",
+    "procedureType": "STARTUP",
+    "phase": "warm-up",
+    "sequence": 2,
+    "title": {
+      "vi": "Mở hơi gia nhiệt (MS) & xả nước ngưng cho P-717A/B và M-761A/B",
+      "en": "Open Heating Steam (MS) & Drain Condensate for P-717A/B and M-761A/B"
+    },
+    "instruction": {
+      "vi": "FO mở van hơi MS V2 (jacket P-717A) và V15b, V15c (chảo/thân M-761A). Mở các van xả nước ngưng V13 và V19a-c cho đến khi hết nước ngưng thì đóng lại.",
+      "en": "FO opens MS valves V2 and V15b-c, drains condensate via V13 and V19a-c until dry steam appears, then closes drain valves."
+    },
+    "operatorRole": "FIELD",
+    "equipmentTags": [
+      "P-717A",
+      "M-761A",
+      "M-761B"
+    ],
+    "valveTags": [
+      "V2 (Start-Up)",
+      "V13 (Start-Up)",
+      "V15b (Start-Up)"
+    ],
+    "instrumentTags": [
+      "TZI-797A"
+    ],
+    "initialConditions": [
+      "Van xả đáy chảo V18 đã đóng chặt"
+    ],
+    "permissives": [],
+    "expectedResponse": [
+      "Nhiệt độ Melting Pan TZI-797A tăng lên trên 135 degC"
+    ],
+    "verificationMethod": [
+      "BM theo dõi xu hướng tăng nhiệt độ TZI-797A trên DCS"
+    ],
+    "alarmsToWatch": [
+      "TZI-797A"
+    ],
+    "interlocks": [
+      "TZAL-797A"
+    ],
+    "hazards": [
+      "Bỏng hơi nước nóng (MS) khi xả nước ngưng"
+    ],
+    "communicationRequired": "FO xác nhận đã mở hơi MS và xả xong nước ngưng với BM",
+    "sourceReference": {
+      "document": "HD-W-7800-02-001",
+      "section": "Step 2",
+      "drawingNumber": "SC0353-ESD0-PD-2000-712 & 717"
+    },
+    "verificationStatus": "VERIFIED"
+  },
+  {
+    "stepId": "STARTUP-003",
+    "procedureType": "STARTUP",
+    "phase": "flaker-prep",
+    "sequence": 3,
+    "title": {
+      "vi": "Cấp khí Nitơ (LN) làm trơ & mở nước làm mát (CW) cho M-761A/B",
+      "en": "Supply Inerting Nitrogen (LN) & Cooling Water (CW) to M-761A/B"
+    },
+    "instruction": {
+      "vi": "Xác nhận quạt vent C-770 đang chạy (PIC-705 = 0.02 kg/cm2g). FO mở van LN chính V14 đến khi AZI-761A < 3.5% và PI-766A đạt 100-300 mmH2O. Mở nước làm mát CW V16a.",
+      "en": "Confirm C-770 running. Open LN valve V14 until AZI-761A < 3.5% and PI-766A = 100-300 mmH2O. Open CW valve V16a."
+    },
+    "operatorRole": "BOTH",
+    "equipmentTags": [
+      "M-761A",
+      "C-770"
+    ],
+    "valveTags": [
+      "V14 (Start-Up)",
+      "V16a (Start-Up)"
+    ],
+    "instrumentTags": [
+      "FZI-7607A",
+      "AZI-761A",
+      "PI-766A",
+      "TZI-795A",
+      "PIC-705"
+    ],
+    "initialConditions": [
+      "C-770 đang vận hành"
+    ],
+    "permissives": [
+      "FZALL-7607A NORMAL (>= 18 Nm3/h)",
+      "AZI-761A < 3.5%"
+    ],
+    "expectedResponse": [
+      "FZI-7607A đạt ~21 Nm3/h, AZI-761A giảm về < 1%, TZI-795A ổn định ở 27-33 degC"
+    ],
+    "verificationMethod": [
+      "Đọc chỉ số FZI-7607A, AZI-761A, PI-766A trên DCS"
+    ],
+    "alarmsToWatch": [
+      "FZI-7607A",
+      "AZI-761A",
+      "PI-766A"
+    ],
+    "interlocks": [
+      "FZALL-7607A",
+      "AZAHH-761A"
+    ],
+    "hazards": [
+      "Nguy cơ cháy nổ hơi Hexane nếu Oxy >= 3.5%"
+    ],
+    "communicationRequired": "FO xác nhận lưu lượng các rotameter FG với BM",
+    "sourceReference": {
+      "document": "HD-W-7800-02-001",
+      "section": "Step 3",
+      "drawingNumber": "SC0353-ESD0-PD-2000-717"
+    },
+    "verificationStatus": "VERIFIED"
+  },
+  {
+    "stepId": "STARTUP-004",
+    "procedureType": "STARTUP",
+    "phase": "lp-circulation",
+    "sequence": 4,
+    "title": {
+      "vi": "Khởi động bơm P-717A tuần hoàn LP qua nhánh Bypass V6 về D-717",
+      "en": "Start Pump P-717A to Circulate LP via Bypass V6 back to D-717"
+    },
+    "instruction": {
+      "vi": "BM kiểm tra mức D-717 (LI-781 > 10%). FO mở van hút V1, van đẩy V4, xác nhận bypass V6 mở và V17 đóng; khởi động bơm P-717A tại hiện trường.",
+      "en": "BM verifies LI-781 > 10%. FO opens V1, V4, verifies V6 open and V17 closed, and starts P-717A."
+    },
+    "operatorRole": "BOTH",
+    "equipmentTags": [
+      "D-717",
+      "P-717A"
+    ],
+    "valveTags": [
+      "V1 (Start-Up)",
+      "V4 (Start-Up)",
+      "V6 (Start-Up)",
+      "V17 (Start-Up)"
+    ],
+    "instrumentTags": [
+      "LI-781"
+    ],
+    "initialConditions": [
+      "Bơm P-717A đã được làm nóng jacket"
+    ],
+    "permissives": [
+      "LI-781 > 10%"
+    ],
+    "expectedResponse": [
+      "Bơm P-717A chạy êm, dòng LP tuần hoàn qua V6 về D-717"
+    ],
+    "verificationMethod": [
+      "Kiểm tra trạng thái RUNNING của P-717A trên DCS"
+    ],
+    "alarmsToWatch": [],
+    "interlocks": [],
+    "hazards": [
+      "Không chạy bơm bánh răng P-717A khi van hút V1 hoặc đường hồi V6 đóng kín"
+    ],
+    "communicationRequired": "BM cho phép FO khởi động P-717A",
+    "sourceReference": {
+      "document": "HD-W-7800-02-001",
+      "section": "Step 4",
+      "drawingNumber": "SC0353-ESD0-PD-2000-712"
+    },
+    "verificationStatus": "VERIFIED"
+  },
+  {
+    "stepId": "STARTUP-005",
+    "procedureType": "STARTUP",
+    "phase": "packing-startup",
+    "sequence": 5,
+    "title": {
+      "vi": "Lắp bao Big Bag, kẹp tiếp địa & khởi động cụm đóng gói PK-761A (HS-765A)",
+      "en": "Install Big Bag, Connect Grounding Clamp & Start Packing Unit PK-761A"
+    },
+    "instruction": {
+      "vi": "FO treo bao Big Bag và kẹp dây tiếp địa đồng chống tĩnh điện. BM xác nhận 3 đèn FLAKER PACKING PERMISSIVES xanh. FO nhấn nút HS-765A kích hoạt chuỗi: RF-763A START -> 20-HEV-761A OPEN -> FD-762A START.",
+      "en": "FO mounts Big Bag and connects grounding wire. BM confirms 3 Packing Permissives green. FO presses HS-765A to run sequence."
+    },
+    "operatorRole": "BOTH",
+    "equipmentTags": [
+      "RF-763A",
+      "FD-762A"
+    ],
+    "valveTags": [
+      "20-HEV-761A"
+    ],
+    "instrumentTags": [
+      "FZI-7607A"
+    ],
+    "initialConditions": [
+      "Chế độ AUTO đã chọn cho cụm đóng gói"
+    ],
+    "permissives": [
+      "FZALL7607A NORMAL",
+      "HV761A CLOSED",
+      "LAH763A NOT HIGH"
+    ],
+    "expectedResponse": [
+      "RF-763A chạy, van trượt 20-HEV-761A mở, băng tải vít FD-762A chạy"
+    ],
+    "verificationMethod": [
+      "Quan sát trạng thái xanh của 3 thiết bị trên DCS"
+    ],
+    "alarmsToWatch": [],
+    "interlocks": [
+      "ESD-761"
+    ],
+    "hazards": [
+      "Nguy cơ phóng tĩnh điện nếu quên kẹp dây tiếp địa bao Big Bag"
+    ],
+    "communicationRequired": "FO báo BM đã lắp bao và kẹp tiếp địa xong trước khi nhấn HS-765A",
+    "sourceReference": {
+      "document": "HD-W-7800-02-001",
+      "section": "Step 5",
+      "drawingNumber": "SC0353-ESD0-PD-2000-717"
+    },
+    "verificationStatus": "VERIFIED"
+  },
+  {
+    "stepId": "STARTUP-006",
+    "procedureType": "STARTUP",
+    "phase": "flaker-startup",
+    "sequence": 6,
+    "title": {
+      "vi": "Xác nhận PERMISSIVE trên DCS, chạy Crusher ZZ-761A & mở nạp LP vào M-761A",
+      "en": "Confirm DCS PERMISSIVE, Start Crusher ZZ-761A & Feed LP to M-761A"
+    },
+    "instruction": {
+      "vi": "BM kiểm tra 6 đèn FLAKER SYSTEM PERMISSIVES xanh và nhấn nút PERMISSIVE trên DCS. FO nhấn Start Crusher ZZ-761A kích hoạt trống M-761A chạy ở 2 RPM; FO mở V5, V17 và đóng bypass V6; dao gạt 20-HEV-763A tự động ép sát (CONTACT).",
+      "en": "BM confirms 6 Flaker Permissives and presses PERMISSIVE on DCS. FO starts ZZ-761A, opens V5, V17 and closes bypass V6."
+    },
+    "operatorRole": "BOTH",
+    "equipmentTags": [
+      "ZZ-761A",
+      "M-761A",
+      "P-717A"
+    ],
+    "valveTags": [
+      "V5 (Start-Up)",
+      "V17 (Start-Up)",
+      "V6 (Start-Up)",
+      "20-HEV-763A"
+    ],
+    "instrumentTags": [
+      "TZI-797A",
+      "AZI-761A",
+      "FZI-7607A"
+    ],
+    "initialConditions": [
+      "Flaker Packing đã chạy hoàn tất sequence"
+    ],
+    "permissives": [
+      "FZALL7607A NORMAL",
+      "HV763A NOT CONTACT",
+      "LAH762A NOT HIGH",
+      "TZAL797A NOT LOW",
+      "AZI761A NOT HIGH",
+      "HCM761A MIN 2 RPM"
+    ],
+    "expectedResponse": [
+      "Trống M-761A quay ở 2 RPM, LP nạp vào chảo, dao gạt 20-HEV-763A ép sát tạo mảnh LP"
+    ],
+    "verificationMethod": [
+      "Quan sát qua cửa sổ kiểm tra trên M-761A và giám sát DCS"
+    ],
+    "alarmsToWatch": [
+      "TZI-795A",
+      "TZI-798A",
+      "PI-766A"
+    ],
+    "interlocks": [
+      "ESD-761"
+    ],
+    "hazards": [
+      "Nếu BM chưa nhấn PERMISSIVE trên DCS, lệnh khởi động tại chỗ sẽ bị chặn"
+    ],
+    "communicationRequired": "Phối hợp liên tục BM <-> FO trong suốt quá trình nạp LP",
+    "sourceReference": {
+      "document": "HD-W-7800-02-001",
+      "section": "Step 6",
+      "drawingNumber": "SC0353-ESD0-PD-2000-717"
+    },
+    "verificationStatus": "VERIFIED"
+  },
+  {
+    "stepId": "SHUTDOWN-001",
+    "procedureType": "SHUTDOWN",
+    "phase": "stop-feeding",
+    "sequence": 1,
+    "title": {
+      "vi": "Giảm tốc độ & dừng bơm P-717A, đóng cô lập tuyến cấp LP",
+      "en": "Reduce Speed & Stop Pump P-717A, Isolate LP Feed Line"
+    },
+    "instruction": {
+      "vi": "BM giảm từ từ tốc độ bơm HC-717A về 0% và dừng bơm P-717A. FO đóng các van chặn tuyến LP V7 (Shutdown) và V17.",
+      "en": "BM reduces HC-717A to 0% and stops P-717A. FO closes LP isolation valves V7 (Shutdown) and V17."
+    },
+    "operatorRole": "BOTH",
+    "equipmentTags": [
+      "P-717A",
+      "M-761A"
+    ],
+    "valveTags": [
+      "V7 (Shutdown)",
+      "V17 (Start-Up)"
+    ],
+    "instrumentTags": [],
+    "initialConditions": [
+      "Có kế hoạch dừng cụm LP Flaker"
+    ],
+    "permissives": [],
+    "expectedResponse": [
+      "Ngừng cấp LP lỏng vào chảo Melting Pan của M-761A"
+    ],
+    "verificationMethod": [
+      "Xác nhận trạng thái STOPPED của P-717A trên DCS"
+    ],
+    "alarmsToWatch": [],
+    "interlocks": [],
+    "hazards": [
+      "Mang đầy đủ PPE chịu nhiệt khi thao tác van trên tuyến LP nóng"
+    ],
+    "communicationRequired": "BM thông báo FO đã dừng P-717A",
+    "sourceReference": {
+      "document": "HD-W-7800-06-001",
+      "section": "Step 1",
+      "drawingNumber": "SC0353-ESD0-PD-2000-712 & 717"
+    },
+    "verificationStatus": "VERIFIED"
+  },
+  {
+    "stepId": "SHUTDOWN-002",
+    "procedureType": "SHUTDOWN",
+    "phase": "empty-flaker",
+    "sequence": 2,
+    "title": {
+      "vi": "Hạ tốc độ về 2 RPM, đặt TZA-797A LL sang OOS, xả cạn chảo & nhấn AUTO STOP",
+      "en": "Reduce Drum Speed to 2 RPM, Set TZA-797A LL to OOS, Drain Pan & Press AUTO STOP"
+    },
+    "instruction": {
+      "vi": "BM hạ từ từ tốc độ trống M-761A về 2 RPM và đặt liên động nhiệt độ thấp TZA-797A LL vào OOS. FO mở van xả đáy V3 (Shutdown) xả cạn LP trong chảo về D-717 rồi đóng lại. BM nhấn nút AUTO STOP trên DCS; FO dừng Crusher ZZ-761A.",
+      "en": "BM reduces drum speed to 2 RPM and places TZA-797A LL in OOS. FO drains pan via V3 and closes it. BM presses AUTO STOP on DCS; FO stops ZZ-761A."
+    },
+    "operatorRole": "BOTH",
+    "equipmentTags": [
+      "M-761A",
+      "ZZ-761A"
+    ],
+    "valveTags": [
+      "V3 (Shutdown)",
+      "20-HEV-763A"
+    ],
+    "instrumentTags": [
+      "TZI-797A"
+    ],
+    "initialConditions": [
+      "Đã đóng kín tuyến cấp LP"
+    ],
+    "permissives": [
+      "TZA-797A LL = OOS"
+    ],
+    "expectedResponse": [
+      "Chảo Melting Pan rỗng hoàn toàn, trống M-761A và máy nghiền ZZ-761A dừng hẳn"
+    ],
+    "verificationMethod": [
+      "Quan sát qua cửa sổ kiểm tra trên M-761A"
+    ],
+    "alarmsToWatch": [
+      "TZI-797A"
+    ],
+    "interlocks": [
+      "TZA-797A LL (OOS)"
+    ],
+    "hazards": [
+      "Bắt buộc đặt TZA-797A LL vào OOS trước khi xả đáy chảo"
+    ],
+    "communicationRequired": "BM xác nhận đã đặt OOS trước khi FO mở van xả đáy V3",
+    "sourceReference": {
+      "document": "HD-W-7800-06-001",
+      "section": "Step 2",
+      "drawingNumber": "SC0353-ESD0-PD-2000-717"
+    },
+    "verificationStatus": "VERIFIED"
+  },
+  {
+    "stepId": "SHUTDOWN-003",
+    "procedureType": "SHUTDOWN",
+    "phase": "shutdown-packing",
+    "sequence": 3,
+    "title": {
+      "vi": "Dừng cụm đóng gói (HS-766A) & đóng van trượt 20-HEV-761A",
+      "en": "Stop Packing Unit (HS-766A) & Close Slide Gate Valve 20-HEV-761A"
+    },
+    "instruction": {
+      "vi": "Sau khi vít tải FD-762A chạy không tải 5 phút làm sạch mảnh LP, FO nhấn nút HS-766A dừng FD-762A, đóng van trượt 20-HEV-761A (De-energize CLOSE) và dừng van xoay RF-763A.",
+      "en": "After running FD-762A empty for 5 mins, FO presses HS-766A to stop FD-762A, close 20-HEV-761A, and stop RF-763A."
+    },
+    "operatorRole": "FIELD",
+    "equipmentTags": [
+      "FD-762A",
+      "RF-763A"
+    ],
+    "valveTags": [
+      "20-HEV-761A"
+    ],
+    "instrumentTags": [],
+    "initialConditions": [
+      "Máy nghiền ZZ-761A đã dừng"
+    ],
+    "permissives": [],
+    "expectedResponse": [
+      "Cụm đóng gói dừng hoàn toàn, van trượt 20-HEV-761A đóng kín"
+    ],
+    "verificationMethod": [
+      "Kiểm tra trạng thái STOPPED / CLOSED trên DCS"
+    ],
+    "alarmsToWatch": [],
+    "interlocks": [],
+    "hazards": [],
+    "communicationRequired": "FO xác nhận với BM đã dừng xong cụm đóng gói",
+    "sourceReference": {
+      "document": "HD-W-7800-06-001",
+      "section": "Step 3",
+      "drawingNumber": "SC0353-ESD0-PD-2000-717"
+    },
+    "verificationStatus": "VERIFIED"
+  },
+  {
+    "stepId": "SHUTDOWN-004",
+    "procedureType": "SHUTDOWN",
+    "phase": "shutdown-vent",
+    "sequence": 4,
+    "title": {
+      "vi": "Purge Nitơ, dừng quạt C-770, giữ áp dương 0.03 kg/cm2g & đặt PV-705.MV = 0%",
+      "en": "Nitrogen Purge, Stop Blower C-770, Hold 0.03 kg/cm2g & Set PV-705.MV = 0%"
+    },
+    "instruction": {
+      "vi": "Dừng quạt C-770, giữ áp suất dương PI-766A = 0.03 kg/cm2g rồi FO đóng van LN V14. BM chuyển PIC-705 sang MAN và đặt PV-705.MV = 0%.",
+      "en": "Stop C-770, hold PI-766A at 0.03 kg/cm2g and close V14. BM sets PIC-705 to MAN with PV-705.MV = 0%."
+    },
+    "operatorRole": "BOTH",
+    "equipmentTags": [
+      "C-770",
+      "M-761A"
+    ],
+    "valveTags": [
+      "V14 (Start-Up)",
+      "PV-705"
+    ],
+    "instrumentTags": [
+      "PI-766A",
+      "PIC-705"
+    ],
+    "initialConditions": [
+      "Hệ thống đóng gói đã dừng"
+    ],
+    "permissives": [],
+    "expectedResponse": [
+      "Áp suất dương Nitơ giữ ổn định, PIC-705 ở MAN với MV = 0%"
+    ],
+    "verificationMethod": [
+      "Kiểm tra thông số trên DCS"
+    ],
+    "alarmsToWatch": [
+      "PIC-705"
+    ],
+    "interlocks": [],
+    "hazards": [
+      "Giữ nước làm mát CW cho đến khi thiết bị về nhiệt độ môi trường"
+    ],
+    "communicationRequired": "BM và FO đối chiếu hoàn tất checklist dừng máy",
+    "sourceReference": {
+      "document": "HD-W-7800-06-001",
+      "section": "Step 4",
+      "drawingNumber": "SC0353-ESD0-PD-2000-717 & 718"
+    },
+    "verificationStatus": "VERIFIED"
+  }
+]

@@ -1,0 +1,239 @@
+[
+  {
+    "equipmentId": "EQ-D-717",
+    "tag": "D-717",
+    "name": {
+      "vi": "Bồn chứa Low Polymer (LP Storage Drum)",
+      "en": "LP Storage Drum"
+    },
+    "category": "Vessel",
+    "train": "COMMON",
+    "pidDrawing": "SC0353-ESD0-PD-2000-712",
+    "operableFromField": true,
+    "operableFromDCS": false,
+    "state": "READY",
+    "sourceReference": {
+      "document": "HD-W-7800-02-001",
+      "drawingNumber": "SC0353-ESD0-PD-2000-712"
+    },
+    "verificationStatus": "VERIFIED"
+  },
+  {
+    "equipmentId": "EQ-P-717A",
+    "tag": "P-717A",
+    "name": {
+      "vi": "Bơm cấp & tuần hoàn LP A",
+      "en": "LP Transfer & Circulation Pump A"
+    },
+    "category": "Pump",
+    "train": "A",
+    "pidDrawing": "SC0353-ESD0-PD-2000-712",
+    "operableFromField": true,
+    "operableFromDCS": true,
+    "state": "STOPPED",
+    "loadPercent": 0,
+    "sourceReference": {
+      "document": "HD-W-7800-02-001",
+      "drawingNumber": "SC0353-ESD0-PD-2000-712"
+    },
+    "verificationStatus": "VERIFIED"
+  },
+  {
+    "equipmentId": "EQ-P-717B",
+    "tag": "P-717B",
+    "name": {
+      "vi": "Bơm cấp & tuần hoàn LP B",
+      "en": "LP Transfer & Circulation Pump B"
+    },
+    "category": "Pump",
+    "train": "B",
+    "pidDrawing": "SC0353-ESD0-PD-2000-712",
+    "operableFromField": true,
+    "operableFromDCS": true,
+    "state": "STOPPED",
+    "loadPercent": 0,
+    "sourceReference": {
+      "document": "HD-W-7800-02-001",
+      "drawingNumber": "SC0353-ESD0-PD-2000-712"
+    },
+    "verificationStatus": "VERIFIED"
+  },
+  {
+    "equipmentId": "EQ-M-761A",
+    "tag": "M-761A",
+    "name": {
+      "vi": "Máy tạo vảy dạng trống A (Drum Flaker A)",
+      "en": "Drum Flaker A"
+    },
+    "category": "Flaker",
+    "train": "A",
+    "pidDrawing": "SC0353-ESD0-PD-2000-717",
+    "operableFromField": true,
+    "operableFromDCS": true,
+    "state": "STOPPED",
+    "speedRpm": 0,
+    "maxSpeedRpm": 5,
+    "hasInspectionWindow": true,
+    "sourceReference": {
+      "document": "HD-W-7800-02-001",
+      "drawingNumber": "SC0353-ESD0-PD-2000-717"
+    },
+    "verificationStatus": "VERIFIED",
+    "notes": "Trang bị cửa sổ kiểm tra có cần gạt (wiper) quan sát tạo vảy bên trong."
+  },
+  {
+    "equipmentId": "EQ-M-761B",
+    "tag": "M-761B",
+    "name": {
+      "vi": "Máy tạo vảy dạng trống B (Drum Flaker B)",
+      "en": "Drum Flaker B"
+    },
+    "category": "Flaker",
+    "train": "B",
+    "pidDrawing": "SC0353-ESD0-PD-2000-717",
+    "operableFromField": true,
+    "operableFromDCS": true,
+    "state": "STOPPED",
+    "speedRpm": 0,
+    "maxSpeedRpm": 5,
+    "hasInspectionWindow": true,
+    "sourceReference": {
+      "document": "HD-W-7800-02-001",
+      "drawingNumber": "SC0353-ESD0-PD-2000-717"
+    },
+    "verificationStatus": "VERIFIED"
+  },
+  {
+    "equipmentId": "EQ-ZZ-761A",
+    "tag": "ZZ-761A",
+    "name": {
+      "vi": "Máy nghiền mảnh LP A (Lump Crusher A)",
+      "en": "LP Lump Crusher A"
+    },
+    "category": "Crusher",
+    "train": "A",
+    "pidDrawing": "SC0353-ESD0-PD-2000-717",
+    "operableFromField": true,
+    "operableFromDCS": true,
+    "state": "STOPPED",
+    "sourceReference": {
+      "document": "HD-W-7800-02-001",
+      "drawingNumber": "SC0353-ESD0-PD-2000-717"
+    },
+    "verificationStatus": "VERIFIED"
+  },
+  {
+    "equipmentId": "EQ-ZZ-761B",
+    "tag": "ZZ-761B",
+    "name": {
+      "vi": "Máy nghiền mảnh LP B (Lump Crusher B)",
+      "en": "LP Lump Crusher B"
+    },
+    "category": "Crusher",
+    "train": "B",
+    "pidDrawing": "SC0353-ESD0-PD-2000-717",
+    "operableFromField": true,
+    "operableFromDCS": true,
+    "state": "STOPPED",
+    "sourceReference": {
+      "document": "HD-W-7800-02-001",
+      "drawingNumber": "SC0353-ESD0-PD-2000-717"
+    },
+    "verificationStatus": "VERIFIED"
+  },
+  {
+    "equipmentId": "EQ-RF-763A",
+    "tag": "RF-763A",
+    "name": {
+      "vi": "Van xoay cấp liệu A (Rotary Valve A)",
+      "en": "Rotary Valve A"
+    },
+    "category": "RotaryValve",
+    "train": "A",
+    "pidDrawing": "SC0353-ESD0-PD-2000-717",
+    "operableFromField": true,
+    "operableFromDCS": true,
+    "state": "STOPPED",
+    "sourceReference": {
+      "document": "HD-W-7800-02-001",
+      "drawingNumber": "SC0353-ESD0-PD-2000-717"
+    },
+    "verificationStatus": "VERIFIED"
+  },
+  {
+    "equipmentId": "EQ-FD-762A",
+    "tag": "FD-762A",
+    "name": {
+      "vi": "Băng tải vít đóng bao A (Screw Conveyor A)",
+      "en": "Screw Conveyor A"
+    },
+    "category": "Conveyor",
+    "train": "A",
+    "pidDrawing": "SC0353-ESD0-PD-2000-717",
+    "operableFromField": true,
+    "operableFromDCS": true,
+    "state": "STOPPED",
+    "sourceReference": {
+      "document": "HD-W-7800-02-001",
+      "drawingNumber": "SC0353-ESD0-PD-2000-717"
+    },
+    "verificationStatus": "VERIFIED"
+  },
+  {
+    "equipmentId": "EQ-E-770",
+    "tag": "E-770",
+    "name": {
+      "vi": "Thiết bị ngưng tụ khí Vent (Vent Gas Condenser)",
+      "en": "Vent Gas Condenser"
+    },
+    "category": "HeatExchanger",
+    "train": "COMMON",
+    "pidDrawing": "SC0353-ESD0-PD-2000-718",
+    "operableFromField": true,
+    "operableFromDCS": false,
+    "state": "READY",
+    "sourceReference": {
+      "document": "HD-W-7800-02-001",
+      "drawingNumber": "SC0353-ESD0-PD-2000-718"
+    },
+    "verificationStatus": "VERIFIED"
+  },
+  {
+    "equipmentId": "EQ-C-770",
+    "tag": "C-770",
+    "name": {
+      "vi": "Quạt hút khí Vent (Vent Gas Blower)",
+      "en": "Vent Gas Blower"
+    },
+    "category": "Blower",
+    "train": "COMMON",
+    "pidDrawing": "SC0353-ESD0-PD-2000-718",
+    "operableFromField": true,
+    "operableFromDCS": true,
+    "state": "RUNNING",
+    "sourceReference": {
+      "document": "HD-W-7800-02-001",
+      "drawingNumber": "SC0353-ESD0-PD-2000-718"
+    },
+    "verificationStatus": "VERIFIED"
+  },
+  {
+    "equipmentId": "EQ-UPSTREAM-T703",
+    "tag": "T-703 / D-711 / D-712 / P-713A/B",
+    "name": {
+      "vi": "Cụm Thượng nguồn (Upstream Low Polymer)",
+      "en": "Upstream Low Polymer Section"
+    },
+    "category": "Upstream",
+    "train": "COMMON",
+    "pidDrawing": "NOT CONFIRMED FROM PROVIDED DOCUMENT",
+    "operableFromField": false,
+    "operableFromDCS": false,
+    "state": "ISOLATED",
+    "sourceReference": {
+      "document": "Low Polymer Handling.txt"
+    },
+    "verificationStatus": "NOT_CONFIRMED",
+    "notes": "NOT CONFIRMED FROM PROVIDED DOCUMENT — Thiếu P&ID và SOP thượng nguồn."
+  }
+]

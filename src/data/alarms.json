@@ -1,0 +1,295 @@
+[
+  {
+    "alarmId": "ALM-FZI-7607A",
+    "tag": "FZI-7607A",
+    "equipmentTag": "M-761A",
+    "description": {
+      "vi": "Lưu lượng khí Nitơ (LN) làm trơ Drum Flaker M-761A",
+      "en": "Inerting Nitrogen (LN) Flow to Drum Flaker M-761A"
+    },
+    "unit": "Nm3/h",
+    "normalRange": {
+      "min": 18,
+      "max": 25,
+      "nominal": 21
+    },
+    "thresholds": {
+      "LL": 8,
+      "L": 18,
+      "H": null,
+      "HH": null
+    },
+    "interlockTag": "FZALL-7607A",
+    "possibleCauses": [
+      "Van điều áp PCV-761A bị nghẽn hoặc giảm áp nguồn cấp LN",
+      "Van chặn V14 (Start-Up) hoặc V1, V2 (Shutdown) mở chưa hết"
+    ],
+    "operatorAction": [
+      "Xác nhận cảnh báo trên DCS",
+      "Yêu cầu Field Operator kiểm tra áp suất nguồn LN, độ mở V14 và hoạt động của PCV-761A",
+      "Nếu lưu lượng giảm <= 8 Nm3/h kích hoạt FZALL-7607A, dừng nạp LP và giữ an toàn hệ thống"
+    ],
+    "sourceReference": {
+      "document": "HD-W-7800-02-001 Start Up LP Flaker Unit_2.docx",
+      "section": "Safe Operating Limits",
+      "drawingNumber": "SC0353-ESD0-PD-2000-717"
+    },
+    "verificationStatus": "VERIFIED"
+  },
+  {
+    "alarmId": "ALM-AZI-761A",
+    "tag": "AZI-761A",
+    "equipmentTag": "M-761A",
+    "description": {
+      "vi": "Hàm lượng Oxy trong khí vent Drum Flaker M-761A",
+      "en": "Oxygen Concentration in Drum Flaker M-761A Vent Gas"
+    },
+    "unit": "%",
+    "normalRange": {
+      "min": 0,
+      "max": 1.0,
+      "nominal": 0
+    },
+    "thresholds": {
+      "LL": null,
+      "L": null,
+      "H": 3.5,
+      "HH": 5.0
+    },
+    "interlockTag": "AZAHH-761A",
+    "possibleCauses": [
+      "Thiếu khí Nitơ làm trơ (FZI-7607A thấp) hoặc hở hệ thống làm kín Seal System",
+      "Áp suất hút quạt C-770 (PIC-705) quá thấp gây hút không khí ngoài vào buồng trống"
+    ],
+    "operatorAction": [
+      "Xác nhận cảnh báo trên DCS và kiểm tra lưu lượng khí mẫu FG-7610A (20-30 Nm3/h)",
+      "Tăng cường purge Nitơ qua V14 / PCV-761A và kiểm tra áp suất hút PIC-705 (0.02 kg/cm2g)",
+      "Nếu AZI-761A >= 5.0% kích hoạt AZAHH-761A / ESD-761, cô lập tuyến cấp LP ngay lập tức"
+    ],
+    "sourceReference": {
+      "document": "HD-W-7800-02-001 Start Up LP Flaker Unit_2.docx",
+      "section": "Safe Operating Limits",
+      "drawingNumber": "SC0353-ESD0-PD-2000-717"
+    },
+    "verificationStatus": "VERIFIED"
+  },
+  {
+    "alarmId": "ALM-TZI-795A",
+    "tag": "TZI-795A",
+    "equipmentTag": "M-761A",
+    "description": {
+      "vi": "Nhiệt độ nước làm mát hồi (CWR) của trống M-761A",
+      "en": "Cooling Water Return (CWR) Temperature of Drum Flaker M-761A"
+    },
+    "unit": "degC",
+    "normalRange": {
+      "min": 27,
+      "max": 33,
+      "nominal": 30
+    },
+    "thresholds": {
+      "LL": null,
+      "L": null,
+      "H": 47,
+      "HH": 52
+    },
+    "interlockTag": "TZAHH-795A",
+    "possibleCauses": [
+      "Lưu lượng nước làm mát CW giảm dưới 40,000 kg/h hoặc van V16a/b/c mở chưa hoàn toàn",
+      "Nhiệt độ LP cấp vào quá cao hoặc bị e khí trong trống (chưa xả vent V30)"
+    ],
+    "operatorAction": [
+      "Kiểm tra lưu lượng nước làm mát qua FG-7613A và độ mở các van V16a, V16b, V16c",
+      "Giảm tải bơm cấp LP (HC-717A) nếu nhiệt độ tiếp tục tăng tiệm cận ngưỡng trip 52 degC"
+    ],
+    "sourceReference": {
+      "document": "HD-W-7800-02-001 Start Up LP Flaker Unit_2.docx",
+      "section": "Safe Operating Limits",
+      "drawingNumber": "SC0353-ESD0-PD-2000-717"
+    },
+    "verificationStatus": "VERIFIED"
+  },
+  {
+    "alarmId": "ALM-PI-766A",
+    "tag": "PI-766A",
+    "equipmentTag": "M-761A",
+    "description": {
+      "vi": "Áp suất bên trong buồng trống Drum Flaker M-761A",
+      "en": "Internal Chamber Pressure of Drum Flaker M-761A"
+    },
+    "unit": "mmH2O",
+    "normalRange": {
+      "min": 100,
+      "max": 300,
+      "nominal": 200
+    },
+    "thresholds": {
+      "LL": null,
+      "L": null,
+      "H": 400,
+      "HH": null
+    },
+    "interlockTag": null,
+    "possibleCauses": [
+      "Van điều áp PCV-761A kẹt mở hoàn toàn cấp quá nhiều khí Nitơ LN",
+      "Quạt hút khí vent C-770 dừng hoặc đường ống vent sang E-770 bị nghẽn"
+    ],
+    "operatorAction": [
+      "Kiểm tra hoạt động của quạt C-770 và áp suất hút PIC-705",
+      "Yêu cầu Field Operator điều tiết van chặn trước/sau PCV-761A để đưa PI-766A về dải 100-300 mmH2O"
+    ],
+    "sourceReference": {
+      "document": "HD-W-7800-02-001 & HD-W-7800-06-001",
+      "section": "Safe Operating Limits",
+      "drawingNumber": "SC0353-ESD0-PD-2000-717"
+    },
+    "verificationStatus": "VERIFIED"
+  },
+  {
+    "alarmId": "ALM-TZI-797A",
+    "tag": "TZI-797A",
+    "equipmentTag": "M-761A",
+    "description": {
+      "vi": "Nhiệt độ chảo nóng chảy (Melting Pan) của M-761A",
+      "en": "Melting Pan Temperature of Drum Flaker M-761A"
+    },
+    "unit": "degC",
+    "normalRange": {
+      "min": 100,
+      "max": 120,
+      "nominal": 115
+    },
+    "thresholds": {
+      "LL": 125,
+      "L": 135,
+      "H": null,
+      "HH": null
+    },
+    "alternativeThresholds": {
+      "source": "HD-W-7800-02-001 Start-Up SOP Table",
+      "LL": 90,
+      "L": 95
+    },
+    "interlockTag": "TZALL-797A",
+    "possibleCauses": [
+      "Mất hơi gia nhiệt MS vào chảo M-761A hoặc bẫy hơi bị nghẽn nước ngưng",
+      "Đang xả cạn LP trong chảo khi dừng máy mà chưa đặt TZA-797A LL sang chế độ OOS"
+    ],
+    "operatorAction": [
+      "Nếu đang vận hành bình thường: Kiểm tra cấp hơi MS (V15b-c) và xả nước ngưng (V19a-c)",
+      "Nếu đang thực hiện quy trình dừng xả chảo (HD-W-7800-06-001): Đặt TZA-797A LL sang OOS trước khi mở van xả đáy V3"
+    ],
+    "sourceReference": {
+      "document": "HD-W-7800-06-001 (L=135, LL=125) vs HD-W-7800-02-001 (L=95, LL=90)",
+      "section": "Safe Operating Limits",
+      "drawingNumber": "SC0353-ESD0-PD-2000-717"
+    },
+    "verificationStatus": "NEED_CONFIRMATION",
+    "conflictNote": "SOP Start-Up ghi L=95/LL=90 degC; SOP Shutdown và ảnh màn hình DCS ghi L=135/LL=125 degC."
+  },
+  {
+    "alarmId": "ALM-TZI-798A",
+    "tag": "TZI-798A",
+    "equipmentTag": "M-761A",
+    "description": {
+      "vi": "Nhiệt độ dòng LP tràn (Overflow) của M-761A hồi về D-717",
+      "en": "LP Overflow Temperature of M-761A Returning to D-717"
+    },
+    "unit": "degC",
+    "normalRange": {
+      "min": 40,
+      "max": 50,
+      "nominal": 45
+    },
+    "thresholds": {
+      "LL": null,
+      "L": null,
+      "H": 75,
+      "HH": 90
+    },
+    "interlockTag": "TZAHH-798A",
+    "possibleCauses": [
+      "Lưu lượng LP cấp vào M-761A quá lớn (HC-717A đặt quá cao) vượt năng lực làm nguội của trống"
+    ],
+    "operatorAction": [
+      "Giảm tốc độ bơm cấp LP (HC-717A) và kiểm tra lưu lượng nước làm mát CW của trống M-761A"
+    ],
+    "sourceReference": {
+      "document": "HD-W-7800-02-001 Start Up LP Flaker Unit_2.docx",
+      "section": "Safe Operating Limits",
+      "drawingNumber": "SC0353-ESD0-PD-2000-717"
+    },
+    "verificationStatus": "VERIFIED"
+  },
+  {
+    "alarmId": "ALM-PIC-705",
+    "tag": "PIC-705",
+    "equipmentTag": "C-770",
+    "description": {
+      "vi": "Áp suất đầu hút quạt khí vent C-770",
+      "en": "Vent Gas Blower C-770 Suction Pressure"
+    },
+    "unit": "kg/cm2g",
+    "normalRange": {
+      "min": 0.015,
+      "max": 0.025,
+      "nominal": 0.02
+    },
+    "thresholds": {
+      "LL": null,
+      "L": 0.01,
+      "H": 0.04,
+      "HH": 0.05
+    },
+    "interlockTag": "ESD-761",
+    "possibleCauses": [
+      "High (>= 0.04 kg/cm2g): Van SDV-711 đóng bất thường hoặc PV-705 mở quá lớn",
+      "Low (<= 0.01 kg/cm2g): Van PV-705 kẹt đóng hoặc giảm nguồn cấp LN"
+    ],
+    "operatorAction": [
+      "Nếu High: Kiểm tra trạng thái mở SDV-711, chuyển PIC-705 sang MAN và giảm dần PV-705.MV",
+      "Nếu Low: Chuyển PIC-705 sang MAN và tăng dần PV-705.MV (hoặc yêu cầu FO mở bypass PV-705)"
+    ],
+    "sourceReference": {
+      "document": "HD-W-7800-02-001 & HD-W-7800-06-001",
+      "section": "Safe Operating Limits & Deviation Analysis",
+      "drawingNumber": "SC0353-ESD0-PD-2000-718"
+    },
+    "verificationStatus": "VERIFIED"
+  },
+  {
+    "alarmId": "ALM-LAH-762A",
+    "tag": "LAH-762A",
+    "equipmentTag": "ZZ-761A",
+    "description": {
+      "vi": "Cảnh báo mức cao phễu chứa dưới máy nghiền (Flaker Hopper A)",
+      "en": "Flaker Hopper A Level High Alarm"
+    },
+    "unit": "%",
+    "normalRange": {
+      "min": 0,
+      "max": 50,
+      "nominal": 15
+    },
+    "thresholds": {
+      "LL": null,
+      "L": null,
+      "H": 80,
+      "HH": 95
+    },
+    "interlockTag": "LSHH-762A",
+    "possibleCauses": [
+      "Thay bao Big Bag chậm sau khi dừng gói đóng bao HS-766A",
+      "Nghẽn tại van trượt Z-764A (20-HEV-761A) hoặc van xoay RF-763A"
+    ],
+    "operatorAction": [
+      "Khẩn trương hoàn tất thay bao Big Bag, kẹp dây tiếp địa và nhấn HS-765A chạy lại cụm đóng gói trước khi chạm mức LSHH-762A"
+    ],
+    "sourceReference": {
+      "document": "HD-W-7800-02-001 Start Up LP Flaker Unit_2.docx",
+      "section": "Step 7.2 - Loading LP Flaker",
+      "drawingNumber": "SC0353-ESD0-PD-2000-717"
+    },
+    "verificationStatus": "VERIFIED"
+  }
+]

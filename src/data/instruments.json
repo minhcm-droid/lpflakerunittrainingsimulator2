@@ -1,0 +1,159 @@
+[
+  {
+    "instrumentId": "INST-LI-781",
+    "tag": "LI-781",
+    "equipmentTag": "D-717",
+    "description": {
+      "vi": "Mức bồn chứa Low Polymer D-717",
+      "en": "LP Storage Drum D-717 Level"
+    },
+    "unit": "%",
+    "value": 62.5,
+    "pidDrawing": "SC0353-ESD0-PD-2000-712",
+    "sourceReference": {
+      "document": "HD-W-7800-02-001",
+      "drawingNumber": "SC0353-ESD0-PD-2000-712"
+    },
+    "verificationStatus": "VERIFIED"
+  },
+  {
+    "instrumentId": "INST-FZI-7607A",
+    "tag": "FZI-7607A",
+    "equipmentTag": "M-761A",
+    "description": {
+      "vi": "Lưu lượng Nitơ (LN) làm trơ M-761A",
+      "en": "Inerting LN Flow to M-761A"
+    },
+    "unit": "Nm3/h",
+    "value": 21.0,
+    "pidDrawing": "SC0353-ESD0-PD-2000-717",
+    "sourceReference": {
+      "document": "HD-W-7800-02-001",
+      "drawingNumber": "SC0353-ESD0-PD-2000-717"
+    },
+    "verificationStatus": "VERIFIED"
+  },
+  {
+    "instrumentId": "INST-AZI-761A",
+    "tag": "AZI-761A",
+    "equipmentTag": "M-761A",
+    "description": {
+      "vi": "Hàm lượng Oxy trong khí vent M-761A",
+      "en": "Oxygen Analyzer M-761A"
+    },
+    "unit": "%",
+    "value": 0.4,
+    "pidDrawing": "SC0353-ESD0-PD-2000-717",
+    "sourceReference": {
+      "document": "HD-W-7800-02-001",
+      "drawingNumber": "SC0353-ESD0-PD-2000-717"
+    },
+    "verificationStatus": "VERIFIED"
+  },
+  {
+    "instrumentId": "INST-PI-766A",
+    "tag": "PI-766A",
+    "equipmentTag": "M-761A",
+    "description": {
+      "vi": "Áp suất buồng trống M-761A",
+      "en": "Drum Flaker M-761A Chamber Pressure"
+    },
+    "unit": "mmH2O",
+    "value": 210,
+    "pidDrawing": "SC0353-ESD0-PD-2000-717",
+    "sourceReference": {
+      "document": "HD-W-7800-02-001",
+      "drawingNumber": "SC0353-ESD0-PD-2000-717"
+    },
+    "verificationStatus": "VERIFIED"
+  },
+  {
+    "instrumentId": "INST-TZI-797A",
+    "tag": "TZI-797A",
+    "equipmentTag": "M-761A",
+    "description": {
+      "vi": "Nhiệt độ chảo nóng chảy Melting Pan M-761A",
+      "en": "Melting Pan Temperature M-761A"
+    },
+    "unit": "degC",
+    "value": 142.0,
+    "oosActive": false,
+    "pidDrawing": "SC0353-ESD0-PD-2000-717",
+    "sourceReference": {
+      "document": "HD-W-7800-02-001 & 06-001",
+      "drawingNumber": "SC0353-ESD0-PD-2000-717"
+    },
+    "verificationStatus": "NEED_CONFIRMATION"
+  },
+  {
+    "instrumentId": "INST-TZI-795A",
+    "tag": "TZI-795A",
+    "equipmentTag": "M-761A",
+    "description": {
+      "vi": "Nhiệt độ nước làm mát hồi (CWR) M-761A",
+      "en": "Cooling Water Return Temp M-761A"
+    },
+    "unit": "degC",
+    "value": 30.2,
+    "pidDrawing": "SC0353-ESD0-PD-2000-717",
+    "sourceReference": {
+      "document": "HD-W-7800-02-001",
+      "drawingNumber": "SC0353-ESD0-PD-2000-717"
+    },
+    "verificationStatus": "VERIFIED"
+  },
+  {
+    "instrumentId": "INST-TZI-798A",
+    "tag": "TZI-798A",
+    "equipmentTag": "M-761A",
+    "description": {
+      "vi": "Nhiệt độ dòng LP tràn (Overflow) M-761A",
+      "en": "LP Overflow Temp M-761A"
+    },
+    "unit": "degC",
+    "value": 45.0,
+    "pidDrawing": "SC0353-ESD0-PD-2000-717",
+    "sourceReference": {
+      "document": "HD-W-7800-02-001",
+      "drawingNumber": "SC0353-ESD0-PD-2000-717"
+    },
+    "verificationStatus": "VERIFIED"
+  },
+  {
+    "instrumentId": "INST-LAH-762A",
+    "tag": "LAH-762A",
+    "equipmentTag": "ZZ-761A",
+    "description": {
+      "vi": "Mức phễu chứa Flaker Hopper A",
+      "en": "Flaker Hopper A Level"
+    },
+    "unit": "%",
+    "value": 15.0,
+    "pidDrawing": "SC0353-ESD0-PD-2000-717",
+    "sourceReference": {
+      "document": "HD-W-7800-02-001",
+      "drawingNumber": "SC0353-ESD0-PD-2000-717"
+    },
+    "verificationStatus": "VERIFIED"
+  },
+  {
+    "instrumentId": "INST-PIC-705",
+    "tag": "PIC-705",
+    "equipmentTag": "C-770",
+    "description": {
+      "vi": "Áp suất đầu hút quạt khí vent C-770",
+      "en": "Vent Blower C-770 Suction Pressure"
+    },
+    "unit": "kg/cm2g",
+    "value": 0.02,
+    "setpoint": 0.02,
+    "mvPercent": 45,
+    "mode": "AUTO",
+    "pidDrawing": "SC0353-ESD0-PD-2000-718",
+    "sourceReference": {
+      "document": "HD-W-7800-02-001 & 06-001",
+      "drawingNumber": "SC0353-ESD0-PD-2000-718"
+    },
+    "verificationStatus": "VERIFIED"
+  }
+]

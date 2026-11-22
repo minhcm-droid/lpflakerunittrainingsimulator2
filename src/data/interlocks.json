@@ -1,0 +1,139 @@
+[
+  {
+    "interlockId": "PERM-PACKING-A",
+    "type": "PERMISSIVE",
+    "name": {
+      "vi": "Điều kiện cho phép khởi động Cụm đóng gói A (Flaker Packing A)",
+      "en": "Flaker Packing A Start-Up Permissives"
+    },
+    "targetEquipment": [
+      "RF-763A",
+      "Z-764A",
+      "FD-762A"
+    ],
+    "conditions": [
+      {
+        "tag": "FZALL-7607A",
+        "label": "FZALL7607A NORMAL",
+        "rule": "FZI-7607A >= 18 Nm3/h"
+      },
+      {
+        "tag": "20-HZLC-761A",
+        "label": "HV761A CLOSED",
+        "rule": "Slide Gate Valve 20-HEV-761A == CLOSED"
+      },
+      {
+        "tag": "20-LSH-763A",
+        "label": "LAH763A NOT HIGH",
+        "rule": "Packing Hopper Level < High Alarm"
+      }
+    ],
+    "actionOnSatisfied": "Cho phép Field Operator nhấn nút HS-765A tại hiện trường để chạy chuỗi: RF-763A START -> 20-HEV-761A OPEN -> FD-762A START.",
+    "sourceReference": {
+      "document": "HD-W-7800-02-001 Start Up LP Flaker Unit_2.docx",
+      "section": "Step 5 - Start-up LP Flaker Packing Unit",
+      "drawingNumber": "SC0353-ESD0-PD-2000-717"
+    },
+    "verificationStatus": "VERIFIED"
+  },
+  {
+    "interlockId": "PERM-FLAKER-A",
+    "type": "PERMISSIVE",
+    "name": {
+      "vi": "Điều kiện cho phép khởi động Hệ thống tạo vảy A (Flaker System A)",
+      "en": "LP Flaker System A Start-Up Permissives"
+    },
+    "targetEquipment": [
+      "ZZ-761A",
+      "M-761A"
+    ],
+    "conditions": [
+      {
+        "tag": "FZALL-7607A",
+        "label": "FZALL7607A NORMAL",
+        "rule": "FZI-7607A >= 18 Nm3/h"
+      },
+      {
+        "tag": "20-HZLO-763A",
+        "label": "HV763A NOT CONTACT",
+        "rule": "Scraper 20-HEV-763A == NOT CONTACT (OPEN)"
+      },
+      {
+        "tag": "20-LAH-762A",
+        "label": "LAH762A NOT HIGH",
+        "rule": "Flaker Hopper Level < High Alarm"
+      },
+      {
+        "tag": "TZAL-797A",
+        "label": "TZAL797A NOT LOW",
+        "rule": "TZI-797A > Low Alarm hoặc OOS"
+      },
+      {
+        "tag": "AZI-761A",
+        "label": "AZI761A NOT HIGH",
+        "rule": "AZI-761A < 3.5%"
+      },
+      {
+        "tag": "HCM-761A",
+        "label": "HCM761A MIN 2 RPM",
+        "rule": "Drum Flaker VFD Speed Setpoint >= 2 RPM"
+      }
+    ],
+    "actionOnSatisfied": "Boardman nhấn nút PERMISSIVE trên DCS -> Field Operator nhấn Start 20-ZZM-761A -> Sequence tự động chạy Drum Flaker 20-MM-761A và Assistant Roller 20-MM-762A.",
+    "sourceReference": {
+      "document": "HD-W-7800-02-001 Start Up LP Flaker Unit_2.docx",
+      "section": "Step 6 - Start-up LP Flaker Unit",
+      "drawingNumber": "SC0353-ESD0-PD-2000-717"
+    },
+    "verificationStatus": "VERIFIED"
+  },
+  {
+    "interlockId": "ESD-761",
+    "type": "SAFETY_INTERLOCK",
+    "name": {
+      "vi": "Hệ thống dừng khẩn cấp cụm LP Flaker & Vent Recovery (ESD-761)",
+      "en": "LP Flaker & Vent Recovery Emergency Shutdown (ESD-761)"
+    },
+    "triggers": [
+      "FZALL-7607A/B (Lưu lượng Nitơ <= 8 Nm3/h)",
+      "AZAHH-761A/B (Hàm lượng Oxy >= 5.0%)",
+      "TZAHH-795A/B (Nhiệt độ nước làm mát hồi CWR >= 52 degC)",
+      "TZAHH-798A/B (Nhiệt độ LP Overflow >= 90 degC)",
+      "TZALL-797A/B (Nhiệt độ Melting Pan <= 125 degC / 90 degC khi chưa đặt OOS)",
+      "PIC-705 HH (>= 0.05 kg/cm2g)"
+    ],
+    "tripActions": [
+      "Dừng Drum Flaker HCM-761A/B & Assistant Roller HCM-762A/B",
+      "Nhả dao gạt Scraper 20-HEV-763A/B (NOT CONTACT)",
+      "Dừng Crusher ZZM-761A/B, Screw Conveyor FDM-762A/B, Rotary Valve RFM-763A/B",
+      "Đóng Slide Gate Valve 20-HEV-761A/B (FC)",
+      "Dừng quạt hút Vent Gas Blower C-770",
+      "Đóng SDV-711 (FC - tuyến đi D-882) và mở SDV-712 (FO - xả an toàn ra ATM)"
+    ],
+    "bypassMechanism": "Chỉ TZA-797A/B LL có nút OOS (Out of Service) trên DCS để phục vụ xả cạn chảo khi dừng máy.",
+    "sourceReference": {
+      "document": "P&ID SC0353-ESD0-PD-2000-717 & 718, HD-W-7800-02-001 & 06-001",
+      "section": "Logic Narratives HD1-2M90-5027-031 chưa đính kèm"
+    },
+    "verificationStatus": "NEED_CONFIRMATION",
+    "conflictNote": "Bảng Cause & Effect đầy đủ (HD1-2M90-5027-031) là NOT CONFIRMED FROM PROVIDED DOCUMENT."
+  },
+  {
+    "interlockId": "UPSTREAM-INTERLOCKS",
+    "type": "SAFETY_INTERLOCK",
+    "name": {
+      "vi": "Liên động cụm thượng nguồn (T-703, D-711, D-712, P-713A/B)",
+      "en": "Upstream Low Polymer Section Interlocks"
+    },
+    "triggers": [
+      "NOT CONFIRMED FROM PROVIDED DOCUMENT"
+    ],
+    "tripActions": [
+      "NOT CONFIRMED FROM PROVIDED DOCUMENT"
+    ],
+    "sourceReference": {
+      "document": "Low Polymer Handling.txt"
+    },
+    "verificationStatus": "NOT_CONFIRMED"
+  }
+]
